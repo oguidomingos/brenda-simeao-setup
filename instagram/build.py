@@ -126,7 +126,7 @@ section{{max-width:1280px;margin:0 auto;padding:30px 6vw}}h2{{font-family:'Playf
 </style><header><h1>Seu Instagram: antes e depois das legendas</h1>
 <p>Pegamos 9 posts reais do perfil <b>@drabrendasimeao</b> e reescrevemos só a legenda (mesma foto), aplicando o que a auditoria apontou: <b>contexto, história do caso, CTA claro e hashtags locais</b>. À esquerda, como está hoje; à direita, como ficaria.</p>
 <div class="rules"><span>✅ CTA em todo post: link da bio → WhatsApp</span><span>✅ Tom dela, humano e sem promessa de resultado</span><span>✅ Hashtags locais + cidade</span><span>⚠️ Antes/depois exige autorização de imagem do paciente</span></div></header>
-{rows}<footer>Expoente · Marketing para quem cuida de pessoas · Prints coletados em 14/10/2026. Imagens em baixa resolução (capturas de tela); na produção usamos os arquivos originais. Inclua o CRO-GO e o nome do responsável técnico conforme regras do CFO.</footer></html>"""
+{rows}<footer>Expoente · Engenharia de Crescimento · Prints coletados em 14/10/2026. Imagens em baixa resolução (capturas de tela); na produção usamos os arquivos originais. Inclua o CRO-GO e o nome do responsável técnico conforme regras do CFO.</footer></html>"""
 open('antes-depois-legendas.html','w').write(page)
 # markdown
 md="# Instagram da Dra Brenda — legendas antes/depois\n\nMesma foto, nova legenda. Prints de 14/10/2026.\n\n"
