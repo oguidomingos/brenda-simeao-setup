@@ -12,3 +12,8 @@ Base: `/root/projects/brenda-simeao/auditoria-dra-brenda.md` (preservada, intoca
 - Pixel Meta / GA4 (comentário TRACKING no head da LP)
 - Ticket médio real (deck usa R$ 4.000 hipotético) e taxas de conversão: tudo é ESTIMATIVA
 - Imagens são recortes de screenshots (baixa resolução); trocar pelos originais
+
+## v3 (14/10, feedback mobile)
+- Deck agora é HTML responsivo mobile first: `apresentacao-comercial/proposta-v3.html` (gerador `build3.py`). PDF v3 NÃO publicado: o layout de impressão corta slides longos. v1/v2 ficam como histórico.
+- LP: nova foto de capa `lp/assets/dra-brenda-hero-v2.jpg` (anterior preservada em `index-v1-hero-antigo.html`).
+- Instagram: fontes maiores para leitura no celular.

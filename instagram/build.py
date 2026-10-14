@@ -114,14 +114,14 @@ page=f"""<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="vie
 <style>
 *{{box-sizing:border-box}}body{{margin:0;font-family:Inter,sans-serif;background:#f6f1ec;color:#2b1d22}}
 header{{padding:56px 6vw 24px;max-width:1280px;margin:auto}}h1{{font-family:'Playfair Display',serif;font-size:44px;margin:0 0 10px}}
-header p{{max-width:760px;font-size:17px;line-height:1.55;color:#5b4a50}}
-.rules{{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}}.rules span{{background:#fff;border:1px solid #e5d9d0;border-radius:99px;padding:8px 14px;font-size:13px}}
+header p{{max-width:760px;font-size:19px;line-height:1.55;color:#5b4a50}}
+.rules{{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}}.rules span{{background:#fff;border:1px solid #e5d9d0;border-radius:99px;padding:10px 16px;font-size:15px}}
 section{{max-width:1280px;margin:0 auto;padding:30px 6vw}}h2{{font-family:'Playfair Display',serif;font-size:26px;margin:0 0 16px}}h2 span{{color:#b0705a;margin-right:8px}}h2 small{{font:400 14px Inter;color:#8a777c;margin-left:8px}}
 .pair{{display:grid;grid-template-columns:1fr 1fr;gap:22px}}.card{{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px #3b1f2b14;position:relative;display:flex;flex-direction:column}}
-.card img{{width:100%;height:380px;object-fit:cover;object-position:center;display:block}}.tag{{position:absolute;top:12px;left:12px;z-index:2;font:700 11px Inter;letter-spacing:.08em;padding:6px 11px;border-radius:99px;color:#fff}}
-.b .tag{{background:#8a777c}}.a .tag{{background:#b0705a}}.a{{outline:2px solid #b0705a}}.body{{padding:16px 18px 18px;font-size:14px;line-height:1.5}}.u{{margin-bottom:8px;font-size:13px}}
-.cap{{white-space:normal}}.b .cap{{color:#7a6a70}}.meta{{margin-top:12px;font-size:12px;color:#8a777c;border-top:1px solid #eee;padding-top:10px}}
-.why{{font-size:14px;color:#5b4a50;margin:14px 2px 0}}footer{{padding:40px 6vw;text-align:center;color:#8a777c;font-size:13px}}
+.card img{{width:100%;height:min(80vw,420px);object-fit:cover;object-position:center;display:block}}.tag{{position:absolute;top:12px;left:12px;z-index:2;font:700 13px Inter;letter-spacing:.08em;padding:6px 11px;border-radius:99px;color:#fff}}
+.b .tag{{background:#8a777c}}.a .tag{{background:#b0705a}}.a{{outline:2px solid #b0705a}}.body{{padding:18px 20px 20px;font-size:17px;line-height:1.5}}.u{{margin-bottom:8px;font-size:15px}}
+.cap{{white-space:normal}}.b .cap{{color:#7a6a70}}.meta{{margin-top:12px;font-size:14px;color:#8a777c;border-top:1px solid #eee;padding-top:10px}}
+.why{{font-size:16px;color:#5b4a50;margin:14px 2px 0}}footer{{padding:40px 6vw;text-align:center;color:#8a777c;font-size:13px}}
 @media(max-width:800px){{.pair{{grid-template-columns:1fr}}h1{{font-size:32px}}}}
 </style><header><h1>Seu Instagram: antes e depois das legendas</h1>
 <p>Pegamos 9 posts reais do perfil <b>@drabrendasimeao</b> e reescrevemos só a legenda (mesma foto), aplicando o que a auditoria apontou: <b>contexto, história do caso, CTA claro e hashtags locais</b>. À esquerda, como está hoje; à direita, como ficaria.</p>
