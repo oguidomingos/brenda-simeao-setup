@@ -17,3 +17,8 @@ Base: `/root/projects/brenda-simeao/auditoria-dra-brenda.md` (preservada, intoca
 - Deck agora é HTML responsivo mobile first: `apresentacao-comercial/proposta-v3.html` (gerador `build3.py`). PDF v3 NÃO publicado: o layout de impressão corta slides longos. v1/v2 ficam como histórico.
 - LP: nova foto de capa `lp/assets/dra-brenda-hero-v2.jpg` (anterior preservada em `index-v1-hero-antigo.html`).
 - Instagram: fontes maiores para leitura no celular.
+
+## v4/v3 (15/10, tipografia e ícones)
+- Fontes self-hosted em `shared/` (Cormorant Garamond para títulos, Inter para texto). Antes as fontes não estavam carregadas e o celular caía em fonte do sistema.
+- Emojis removidos; ícones SVG outline translúcidos em `shared/icons.py`.
+- Novos: `lp/index.html` (anterior: `index-v2-antes-tipografia.html`), `instagram/antes-depois-legendas-v2.html`, `apresentacao-comercial/proposta-v4.html`.
