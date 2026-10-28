@@ -1,5 +1,7 @@
 # Gravações e logística — Dra. Brenda Simeão (EXP-25)
 
+> Nota de 28/10/2026 (EXP-25 v2): a diária de sábado e a dependência de equipe audiovisual (seções 3 e 4) foram substituídas por `roteiros-gravacao.md`: o contrato exclui captação presencial, e a Dra. grava com o próprio celular seguindo o guia. Os roteiros da seção 1 foram reaproveitados e adaptados lá. Seções 3 e 4 ficam só como histórico.
+
 Versão 1 · 28/10/2026 · Base: `dossie-estrategico-funil.md` (seções 1.2 e 1.3) e pasta `instagram/`.
 Regras do CFO citadas vêm de fontes secundárias (Res. CFO-196/2019): confirmar o texto vigente no CFO / CRO-GO antes de publicar.
 
