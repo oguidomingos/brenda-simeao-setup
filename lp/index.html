@@ -1,14 +1,23 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="../shared/fonts.css"><title>Dra. Brenda Simeão | Facetas em Resina em Goiânia</title>
 <meta name="description" content="Facetas em resina esculpidas à mão para um sorriso natural e harmônico. Agende sua avaliação com a Dra. Brenda Simeão em Goiânia.">
-<!-- TRACKING: preencher PIXEL_ID na publicação. Spec completa em ../dossie-estrategico-funil.md (seção 4) -->
+<!-- TRACKING: preencher PIXEL_ID e CAPI_ENDPOINT na publicação. Spec em ../tracking.md e ../dossie-estrategico-funil.md (seção 4) -->
 <script>
-window.PIXEL_ID="";window.CAPI_ENDPOINT="";// TODO: id do Pixel e endpoint server-side (CAPI)
+window.PIXEL_ID="";window.CAPI_ENDPOINT="";// PIXEL_ID: id do Pixel (so numeros). CAPI_ENDPOINT: URL https do endpoint server-side (ver tracking.md)
 window.eid=()=>"e"+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+// Atribuicao: utm_*, fbclid, fbc, fbp e ref (codigo curto) guardados por sessao; nada de dado de saude
+window.ATTR=(()=>{const K="lp_attr",q=new URLSearchParams(location.search);let o={};try{o=JSON.parse(sessionStorage.getItem(K)||"{}")}catch(e){}
+ ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid"].forEach(k=>{if(q.get(k))o[k]=q.get(k)});
+ if(!o.ref)o.ref=Math.random().toString(36).slice(2,8).toUpperCase();
+ try{sessionStorage.setItem(K,JSON.stringify(o))}catch(e){}return o})();
+window.ck=n=>(document.cookie.match(new RegExp("(?:^|; )"+n+"=([^;]+)"))||[])[1];
+// fbc: cookie _fbc se existir; senao monta fb.1.<ts>.<fbclid> a partir da URL
+window.getFbc=()=>ck("_fbc")||(ATTR.fbclid?"fb.1."+Date.now()+"."+ATTR.fbclid:undefined);
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];if(!window.PIXEL_ID)return;t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 if(window.PIXEL_ID){fbq('init',window.PIXEL_ID);}
+// track: dispara Pixel (browser) e CAPI (servidor) com o MESMO event_id para deduplicacao
 window.track=(name,data={})=>{const id=eid();if(window.fbq&&window.PIXEL_ID)fbq('track',name,data,{eventID:id});
- if(window.CAPI_ENDPOINT)navigator.sendBeacon(window.CAPI_ENDPOINT,JSON.stringify({event_name:name,event_id:id,event_source_url:location.href,custom_data:data,fbc:(document.cookie.match(/_fbc=([^;]+)/)||[])[1],fbp:(document.cookie.match(/_fbp=([^;]+)/)||[])[1]}));return id};
+ if(window.CAPI_ENDPOINT)navigator.sendBeacon(window.CAPI_ENDPOINT,JSON.stringify({event_name:name,event_id:id,event_time:Math.floor(Date.now()/1e3),event_source_url:location.href,custom_data:data,ref:ATTR.ref,attribution:ATTR,fbc:getFbc(),fbp:ck("_fbp")}));return id};
 </script>
 <style>
 :root{--ink:#2e2620;--wine:#4a3428;--rose:#7d8f6e;--rose2:#b9c4a8;--cream:#f7f1e8;--sand:#ece2d3;--mut:#6b5e52;--wa:#5f7a52}
@@ -100,12 +109,12 @@ footer{background:#2a211a;color:#c9baa6;font-size:14px;padding:34px 0;text-align
 <a class="fab wa" href="#" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11 19.9L3 29l6.300-2A13 13 0 1 0 16 3zm0 2.400a10.600 10.600 0 1 1-5.600 19.600l-.4-.2-3.700 1.100 1.200-3.600-.3-.4A10.600 10.600 0 0 1 16 5.400zm-3.900 5.300c-.3 0-.7.100-1 .5-.4.400-1.300 1.300-1.300 3.100s1.300 3.600 1.500 3.800c.2.300 2.600 4.100 6.400 5.600 3.200 1.200 3.800 1 4.500.9.700-.1 2.200-.9 2.500-1.800.3-.9.300-1.600.2-1.800-.1-.2-.3-.3-.7-.5l-2.300-1.100c-.3-.1-.6-.2-.8.200l-1 1.200c-.2.200-.4.300-.7.100-.4-.2-1.500-.5-2.800-1.700-1-.9-1.700-2-1.900-2.400-.2-.4 0-.6.200-.7l.5-.6c.2-.2.200-.4.300-.6.100-.2.100-.4 0-.6l-1-2.400c-.3-.6-.5-.5-.8-.5z"/></svg></a>
 <script>
 const WA="5562991980311"; // WhatsApp profissional (62) 99198-0311
-const go=m=>"https://wa.me/"+WA+"?text="+encodeURIComponent(m);
+const go=m=>"https://wa.me/"+WA+"?text="+encodeURIComponent(m+"\n\nRef: "+ATTR.ref);// Ref = codigo curto; CRM cruza com o registro do lead no servidor
 document.querySelectorAll('a.wa').forEach(a=>{a.href=go("Olá, Dra. Brenda! Gostaria de mais informações sobre facetas em resina.");a.addEventListener('click',()=>track('Contact',{content_name:'cta_whatsapp'}))});
 track('PageView');
 let vc=0;const fire=()=>{if(vc)return;vc=1;track('ViewContent',{content_name:'lp_facetas_resina'})};
 setTimeout(fire,15000);addEventListener('scroll',()=>{if(scrollY/(document.body.scrollHeight-innerHeight)>.5)fire()},{passive:true});
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.target);
- track('Lead',{content_name:'form_triagem',queixa:d.get('q'),prazo:d.get('p')});
+ track('Lead',{content_name:'form_triagem'});// sem queixa/prazo: dado de saude nao vai para a Meta
  location.href=go(`Olá, Dra. Brenda! Sou ${d.get('n')}. Quero agendar uma avaliação.\nO que me incomoda: ${d.get('q')}\nQuero começar: ${d.get('p')}\nTratamento anterior: ${d.get('j')}`)});
 </script></body></html>
