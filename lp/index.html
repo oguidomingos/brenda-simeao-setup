@@ -1,13 +1,16 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="../shared/fonts.css"><title>Dra. Brenda Simeão | Facetas em Resina em Goiânia</title>
 <meta name="description" content="Facetas em resina esculpidas à mão para um sorriso natural e harmônico. Agende sua avaliação com a Dra. Brenda Simeão em Goiânia.">
-<!-- TRACKING: preencher PIXEL_ID e CAPI_ENDPOINT na publicação. Spec em ../tracking.md e ../dossie-estrategico-funil.md (seção 4) -->
+<!-- TRACKING: PIXEL_ID definido (decisao do Guilherme, 28/10/2026). CAPI_ENDPOINT segue vazio ate existir endpoint; token da CAPI nunca entra no repositorio. Pixel e eventos so carregam apos o aceite do banner. Spec em ../tracking.md e ../dossie-estrategico-funil.md (seção 4) -->
 <script>
 // LOCAL_NOME: nome do local de atendimento, divulgado com autorizacao da Dra. (28/10/2026), "por enquanto". Trocar SO aqui.
 window.LOCAL_NOME="Interface Odontologia";
 // GOOGLE_REVIEWS_URL: link de avaliacoes do Google Meu Negocio (preencher quando houver acesso; depois rodar tools/gen-qr.py com o mesmo link)
 window.GOOGLE_REVIEWS_URL="";
-window.PIXEL_ID="";window.CAPI_ENDPOINT="";// PIXEL_ID: id do Pixel (so numeros). CAPI_ENDPOINT: URL https do endpoint server-side (ver tracking.md)
+window.PIXEL_ID="737211919420986";window.CAPI_ENDPOINT="";// PIXEL_ID: Pixel "Dra Branda Simeão" (BM 275891219773948), ja existente. CAPI_ENDPOINT: URL https do endpoint server-side (ver tracking.md); vazio = nada vai ao servidor
+// Consentimento (LGPD, contrato 7.3): "granted" | "denied" em localStorage. Sem "granted" nada e carregado nem disparado.
+window.CONSENT_KEY="lp_consent";
+window.getConsent=()=>{try{return localStorage.getItem(CONSENT_KEY)}catch(e){return null}};
 window.eid=()=>"e"+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
 // Atribuicao: utm_*, fbclid, fbc, fbp e ref (codigo curto) guardados por sessao; nada de dado de saude
 window.ATTR=(()=>{const K="lp_attr",q=new URLSearchParams(location.search);let o={};try{o=JSON.parse(sessionStorage.getItem(K)||"{}")}catch(e){}
@@ -17,10 +20,11 @@ window.ATTR=(()=>{const K="lp_attr",q=new URLSearchParams(location.search);let o
 window.ck=n=>(document.cookie.match(new RegExp("(?:^|; )"+n+"=([^;]+)"))||[])[1];
 // fbc: cookie _fbc se existir; senao monta fb.1.<ts>.<fbclid> a partir da URL
 window.getFbc=()=>ck("_fbc")||(ATTR.fbclid?"fb.1."+Date.now()+"."+ATTR.fbclid:undefined);
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];if(!window.PIXEL_ID)return;t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-if(window.PIXEL_ID){fbq('init',window.PIXEL_ID);}
+window.loadPixel=()=>{if(window.fbq||!window.PIXEL_ID||getConsent()!=="granted")return;
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init',window.PIXEL_ID)};
 // track: dispara Pixel (browser) e CAPI (servidor) com o MESMO event_id para deduplicacao
-window.track=(name,data={})=>{const id=eid();if(window.fbq&&window.PIXEL_ID)fbq('track',name,data,{eventID:id});
+window.track=(name,data={})=>{if(getConsent()!=="granted")return;loadPixel();const id=eid();if(window.fbq&&window.PIXEL_ID)fbq('track',name,data,{eventID:id});
  if(window.CAPI_ENDPOINT)navigator.sendBeacon(window.CAPI_ENDPOINT,JSON.stringify({event_name:name,event_id:id,event_time:Math.floor(Date.now()/1e3),event_source_url:location.href,custom_data:data,ref:ATTR.ref,attribution:ATTR,fbc:getFbc(),fbp:ck("_fbp")}));return id};
 </script>
 <style>
@@ -61,6 +65,8 @@ form{background:#fff;color:var(--ink);border-radius:24px;padding:30px;box-shadow
 input,select{width:100%;padding:13px 14px;border:1.5px solid #dccfbd;border-radius:12px;font:inherit;background:#fffcf7}input:focus,select:focus{outline:2px solid var(--rose2);border-color:var(--rose)}form .btn{width:100%;justify-content:center;margin-top:22px}
 .loc{display:flex;gap:18px 30px;flex-wrap:wrap;margin-top:24px;color:#dccfbb;font-size:16.5px}
 footer{background:#2a211a;color:#c9baa6;font-size:14px;padding:34px 0;text-align:center}footer p{max-width:720px;margin:6px auto}
+.cb{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;max-width:760px;margin:auto;background:var(--cream);color:var(--ink);border:1px solid #dccfbd;border-radius:18px;padding:18px 20px;box-shadow:0 16px 44px #2a211a40;font-size:15px;line-height:1.5}.cb[hidden]{display:none}.cb p{margin:0 0 12px}.cb a{color:var(--wine);font-weight:600}.cb .row{display:flex;gap:10px;flex-wrap:wrap}.cb .btn{padding:11px 22px;font-size:15px;box-shadow:none}
+footer .lk{background:none;border:0;padding:0;font:inherit;color:#e3d6c3;text-decoration:underline;cursor:pointer}footer a{color:#e3d6c3}
 .fab{position:fixed;right:20px;bottom:20px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 26px #5f7a5266;text-decoration:none}.fab svg{width:32px;fill:#fff}
 @media(max-width:900px){.hero .w,.diff .w,.about .w,.cta .w{grid-template-columns:1fr;gap:34px}.pains,.steps{grid-template-columns:1fr 1fr}.gal{grid-template-columns:1fr 1fr}.portrait{max-width:420px}.badge{left:8px}section{padding:60px 0}}
 @media(max-width:560px){.pains,.steps{grid-template-columns:1fr}nav .btn{display:none}}
@@ -110,9 +116,10 @@ footer{background:#2a211a;color:#c9baa6;font-size:14px;padding:34px 0;text-align
 <label>O que mais incomoda no seu sorriso?</label><select name="q"><option>Cor dos dentes</option><option>Formato / tamanho</option><option>Dentes desalinhados</option><option>Restaurações antigas</option><option>Outro</option></select>
 <label>Quando gostaria de começar?</label><select name="p"><option>O quanto antes</option><option>Nos próximos 3 meses</option><option>Só estou pesquisando</option></select>
 <label>Já fez algum tratamento estético antes?</label><select name="j"><option>Não</option><option>Sim, clareamento</option><option>Sim, facetas/lentes</option><option>Sim, outro</option></select>
-<button class="btn" type="submit"><svg class="ic "><use href="#i-phone"/></svg> Continuar no WhatsApp</button></form></div></section>
+<button class="btn" type="submit"><svg class="ic "><use href="#i-phone"/></svg> Continuar no WhatsApp</button><p class="note" style="font-size:13px">Ao continuar, você abre uma conversa no WhatsApp com seu nome e as respostas acima. Esses dados são tratados conforme o <a href="privacidade/" style="color:var(--wine)">Aviso de privacidade</a>. Não envie informações clínicas ou de saúde.</p></form></div></section>
 
-<footer><div class="w"><p><b>Dra. Brenda Simeão</b> · Cirurgiã-dentista · CRO-GO 18788 · Goiânia – GO</p><p>Este conteúdo tem caráter informativo e não substitui consulta. Resultados variam de paciente para paciente. Imagens de pacientes divulgadas com autorização.</p><p><span data-local></span> · Rua 22, nº 318, Setor Oeste, Goiânia – GO</p><p>© 2026 Dra. Brenda Simeão. Política de privacidade (LGPD).</p></div></footer>
+<footer><div class="w"><p><b>Dra. Brenda Simeão</b> · Cirurgiã-dentista · CRO-GO 18788 · Goiânia – GO</p><p>Este conteúdo tem caráter informativo e não substitui consulta. Resultados variam de paciente para paciente. Imagens de pacientes divulgadas com autorização.</p><p><span data-local></span> · Rua 22, nº 318, Setor Oeste, Goiânia – GO</p><p>© 2026 Dra. Brenda Simeão. <a href="privacidade/">Aviso de privacidade (LGPD)</a> · <button type="button" class="lk" id="cb-open">Preferências de privacidade</button></p></div></footer>
+<div class="cb" id="cb" role="dialog" aria-labelledby="cb-t" hidden><p><b id="cb-t">Sua privacidade</b><br>Usamos o Pixel da Meta para medir de onde vêm as visitas e melhorar o atendimento. Ele só é ativado se você aceitar. Se recusar ou ignorar este aviso, nada é enviado. Você pode mudar de ideia a qualquer momento pelo rodapé. Saiba mais no <a href="privacidade/">Aviso de privacidade</a>.</p><div class="row"><button type="button" class="btn" id="cb-ok">Aceitar</button><button type="button" class="btn ghost" id="cb-no">Recusar</button></div></div>
 <a class="fab wa" href="#" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11 19.9L3 29l6.300-2A13 13 0 1 0 16 3zm0 2.400a10.600 10.600 0 1 1-5.600 19.600l-.4-.2-3.700 1.100 1.200-3.600-.3-.4A10.600 10.600 0 0 1 16 5.400zm-3.900 5.300c-.3 0-.7.100-1 .5-.4.400-1.300 1.300-1.300 3.100s1.300 3.600 1.500 3.800c.2.300 2.600 4.100 6.400 5.600 3.200 1.200 3.800 1 4.500.9.700-.1 2.200-.9 2.500-1.800.3-.9.300-1.600.2-1.800-.1-.2-.3-.3-.7-.5l-2.300-1.100c-.3-.1-.6-.2-.8.200l-1 1.200c-.2.200-.4.300-.7.100-.4-.2-1.500-.5-2.800-1.700-1-.9-1.700-2-1.900-2.400-.2-.4 0-.6.200-.7l.5-.6c.2-.2.200-.4.300-.6.100-.2.100-.4 0-.6l-1-2.400c-.3-.6-.5-.5-.8-.5z"/></svg></a>
 <script>
 const WA="5562991980311"; // WhatsApp profissional (62) 99198-0311
@@ -120,9 +127,16 @@ const go=m=>"https://wa.me/"+WA+"?text="+encodeURIComponent(m+"\n\nRef: "+ATTR.r
 document.querySelectorAll('a.wa').forEach(a=>{a.href=go("Olá, Dra. Brenda! Gostaria de mais informações sobre facetas em resina.");a.addEventListener('click',()=>track('Contact',{content_name:'cta_whatsapp'}))});
 document.querySelectorAll('[data-local]').forEach(e=>e.textContent=window.LOCAL_NOME);
 if(window.GOOGLE_REVIEWS_URL){const l=document.getElementById('rv-link');l.href=GOOGLE_REVIEWS_URL;l.style.display='';document.getElementById('rv-qr-img').src='assets/qr-avaliacoes.svg';document.getElementById('rv-qr').style.display='';document.getElementById('rv-soon').style.display='none'}
-track('PageView');
-let vc=0;const fire=()=>{if(vc)return;vc=1;track('ViewContent',{content_name:'lp_facetas_resina'})};
-setTimeout(fire,15000);addEventListener('scroll',()=>{if(scrollY/(document.body.scrollHeight-innerHeight)>.5)fire()},{passive:true});
+const cb=document.getElementById('cb');
+// Eventos so apos o aceite: PageView + ViewContent (15s ou 50% de scroll) comecam aqui
+let vc=0,started=0;const fire=()=>{if(vc||getConsent()!=="granted")return;vc=1;track('ViewContent',{content_name:'lp_facetas_resina'})};
+const start=()=>{if(started||getConsent()!=="granted")return;started=1;track('PageView');setTimeout(fire,15000);addEventListener('scroll',()=>{if(scrollY/(document.body.scrollHeight-innerHeight)>.5)fire()},{passive:true})};
+const setConsent=v=>{const had=getConsent()==="granted";try{localStorage.setItem(CONSENT_KEY,v)}catch(e){}cb.hidden=true;
+ if(v==="granted")start();else if(had){["_fbp","_fbc"].forEach(n=>document.cookie=n+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/");location.reload()}};
+document.getElementById('cb-ok').onclick=()=>setConsent("granted");
+document.getElementById('cb-no').onclick=()=>setConsent("denied");
+document.getElementById('cb-open').onclick=()=>{cb.hidden=false;document.getElementById('cb-ok').focus()};
+if(getConsent()==="granted")start();else if(!getConsent())cb.hidden=false;
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.target);
  track('Lead',{content_name:'form_triagem'});// sem queixa/prazo: dado de saude nao vai para a Meta
  location.href=go(`Olá, Dra. Brenda! Sou ${d.get('n')}. Quero agendar uma avaliação.\nO que me incomoda: ${d.get('q')}\nQuero começar: ${d.get('p')}\nTratamento anterior: ${d.get('j')}`)});

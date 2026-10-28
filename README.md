@@ -7,9 +7,9 @@ Base: `/root/projects/brenda-simeao/auditoria-dra-brenda.md` (preservada, intoca
 
 ## Pendências antes de publicar / enviar
 - WhatsApp oficial: constante `WA` no final de `lp/index.html`
-- CRO-GO, endereço/horários reais de atendimento (hoje placeholders `[...]`; clínica Oral Unic não confirmada)
+- Endereço/horários reais de atendimento a conferir com a Dra. (CRO-GO 18788 já preenchido, vindo do formulário dela)
 - Autorização de imagem dos pacientes; confirmar "parcelamos" e número de sessões
-- Pixel Meta / GA4 (comentário TRACKING no head da LP)
+- Pixel Meta definido (737211919420986); falta endpoint e token da CAPI. Aviso de privacidade em `lp/privacidade/`: conferir pendências nos comentários da página
 - Ticket médio real (deck usa R$ 4.000 hipotético) e taxas de conversão: tudo é ESTIMATIVA
 - Imagens são recortes de screenshots (baixa resolução); trocar pelos originais
 

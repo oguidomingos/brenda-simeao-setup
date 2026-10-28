@@ -131,7 +131,7 @@ Margem: cada bloco com 15 min de folga; falas gravadas duas vezes com entonaçõ
 - Casos finalizados: fotos e vídeos de resultado, em alta resolução, com autorização.
 - Modelo/typodont e materiais para a bancada (resinas, cores, instrumentos, polimento), limpos.
 - Roupa: tons neutros (bege, branco, verde-sálvia, marrom), sem estampa, jaleco limpo, cabelo e unhas alinhados. Maquiagem leve.
-- Confirmar: CRO-GO, título exato da pós-graduação, nome a usar para o local (por ora, "consultório").
+- Confirmar: título exato da pós-graduação, nome a usar para o local (por ora, "consultório"). CRO-GO: 18788 (formulário da Dra.); conferir só se aparece igual na tela e na legenda.
 - Ler os roteiros (tópicos, não texto decorado) e dizer com as próprias palavras, respeitando as regras da seção 2.
 - Agenda livre no horário da gravação, sem pacientes de rotina.
 
@@ -147,7 +147,7 @@ Legenda: EXP = Expoente (Guilherme / conteúdo / tráfego); AV = equipe audiovis
 | Revisar roteiros contra o checklist CFO (seção 2) | EXP; aprovação final DRA |
 | Reunir e conferir termos de imagem (por caso e por paciente do dia) | DRA |
 | Convidar e confirmar pacientes da tarde | DRA |
-| Confirmar CRO-GO, titulação e nome do local | DRA |
+| Confirmar titulação e nome do local (CRO-GO 18788 já recebido) | DRA |
 | Preparar consultório (bancada, fundo, cobrir logos) e wardrobe | DRA; EXP orienta |
 | Definir pasta de entrega, nomenclatura e backup | EXP |
 | Revisar lista de equipamento no dia anterior | AV |
@@ -177,6 +177,6 @@ Legenda: EXP = Expoente (Guilherme / conteúdo / tráfego); AV = equipe audiovis
 ## 5. Pendências abertas
 - Data da diária e disponibilidade de Augusto e Pedro (a confirmar com o Guilherme).
 - Nome do local de atendimento: segue pendente; usar só "consultório".
-- Título exato da pós-graduação e CRO-GO a conferir.
+- Título exato da pós-graduação a conferir (CRO-GO 18788 já recebido).
 - Decisão sobre o Reel antigo do isolamento do campo (arquivar ou manter).
 - Texto vigente da Res. CFO-196/2019 a conferir na fonte primária.

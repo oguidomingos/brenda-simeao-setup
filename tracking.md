@@ -15,19 +15,21 @@ Pixels ligados à conta (via `adspixels`):
 
 Páginas ligadas à conta: "Brenda Simeão" (`236733703922417`, 16 seguidores) e três páginas alheias (Travassos Imóveis, Thumdra CRM, Vitor Guilherme), que não são dela.
 
-**Recomendação:** usar o `737211919420986` (único com histórico de disparo, nome mais próximo da Dra.), sujeito ao OK do Guilherme. Os outros três são duplicatas sem uso; não apagar nada sem OK. Em Events Manager, conferir se o Pixel escolhido tem a conta de anúncios atribuída e o domínio da LP verificado. Em 2026 o Pixel é criado já como "conjunto de dados"; o ID é o mesmo.
+**Decisão (Guilherme, 28/10/2026): usar o `737211919420986` ("Dra Branda Simeão", BM `275891219773948`), sem criar outro.** Já está em `window.PIXEL_ID` na LP. Os outros três são duplicatas sem uso; não apagar nada sem OK. Em Events Manager, conferir se o Pixel escolhido tem a conta de anúncios atribuída e o domínio da LP verificado. Em 2026 o Pixel é criado já como "conjunto de dados"; o ID é o mesmo.
 
-**Nada será criado no Meta sem OK.** Se o Guilherme preferir um Pixel limpo, o que seria criado: 1 conjunto de dados "LP Facetas - Dra. Brenda" no BM `275891219773948`, atribuído à conta `act_9695520683892802`, mais 1 token de acesso de sistema para a CAPI. Domínio da LP a verificar no BM.
+**Nada foi criado no Meta.** Alternativa descartada (Pixel limpo) criaria: 1 conjunto de dados "LP Facetas - Dra. Brenda" no BM `275891219773948`, atribuído à conta `act_9695520683892802`, mais 1 token de acesso de sistema para a CAPI. Domínio da LP a verificar no BM.
 
 ## 2. Instalação na LP (`lp/index.html`)
 
-- `window.PIXEL_ID=""` e `window.CAPI_ENDPOINT=""`: preencher na publicação. Vazios = nada dispara (seguro).
+- `window.PIXEL_ID="737211919420986"` preenchido. `window.CAPI_ENDPOINT=""` segue vazio até existir endpoint e token; vazio = nada vai ao servidor. O token da CAPI nunca entra no repositório.
+- **Consentimento (contrato, cláusula 7.3):** banner simples (bege, sálvia, marrom). O script do Pixel (`fbevents.js`) só é carregado e `fbq`/CAPI só disparam **depois do aceite**. Recusar ou ignorar = nada carrega nem dispara. A escolha fica em `localStorage` (`lp_consent` = `granted` ou `denied`). O visitante muda a escolha pelo link "Preferências de privacidade" no rodapé (e na página do aviso); revogar apaga `_fbp`/`_fbc` e recarrega a página. Testado em Chrome headless, desktop e mobile: sem aceite, zero requisições à Meta.
 - `track(nome, dados)` dispara Pixel e CAPI com o **mesmo `event_id`** (deduplicação).
 - Eventos: `PageView`, `ViewContent` (15s ou 50% de scroll), `Contact` (clique em qualquer botão/FAB de WhatsApp, `content_name=cta_whatsapp`), `Lead` (envio do formulário, `content_name=form_triagem`).
 - O `Lead` do browser **não leva mais queixa nem prazo** (dado de saúde fora do Meta).
 - Atribuição: `utm_source/medium/campaign/content/term` e `fbclid` ficam em `sessionStorage`; `fbp` vem do cookie `_fbp`; `fbc` vem do cookie `_fbc` ou é montado como `fb.1.<ts>.<fbclid>`.
 - Código curto `ref` (6 caracteres) gerado por sessão. Vai na mensagem do WhatsApp como `Ref: ABC123` e no payload da CAPI; o servidor guarda `ref` → atribuição, e o CRM recupera a origem quando a conversa começa. A mensagem não leva UTM, fbclid nem dado de saúde.
-- **Ainda falta (fora desta tarefa):** banner de consentimento. Hoje o Pixel carregaria ao abrir a página; antes do go-live, só chamar `fbq('init')` após o aceite (LGPD, dossiê 4.1).
+- Aviso de privacidade em `lp/privacidade/index.html` (controladora, dados, finalidade, base legal, compartilhamento, retenção, direitos, contato). Pendências marcadas em comentário HTML no topo do arquivo (e-mail do titular, prazo de retenção, ferramenta de atendimento).
+- O aceite do banner cobre também o envio à CAPI (`sendBeacon`). A CAPI disparada pelo CRM (Lead qualificado, Schedule) depende do consentimento registrado no atendimento; definir esse registro quando o endpoint existir.
 
 ## 3. Desenho do endpoint CAPI
 
@@ -71,7 +73,7 @@ Páginas ligadas à conta: "Brenda Simeão" (`236733703922417`, 16 seguidores) e
 ## 4. Depende do Guilherme ou da Dra.
 
 **Guilherme:**
-1. OK para usar o Pixel `737211919420986` (ou OK para criar um novo).
+1. ~~OK para usar o Pixel `737211919420986`~~ (dado em 28/10/2026).
 2. Pedir à Dra. acesso de parceiro ao Business Manager `275891219773948` para a Expoente, com controle sobre o Pixel e a conta de anúncios (se ainda não tiver o nível necessário).
 3. Definir onde o endpoint CAPI roda (host/subdomínio) e o domínio final da LP; verificar o domínio no BM.
 4. Gerar o token de acesso de sistema para a CAPI (Events Manager, aba Configurações do conjunto de dados) e guardá-lo em variável de ambiente do servidor.
@@ -80,6 +82,6 @@ Páginas ligadas à conta: "Brenda Simeão" (`236733703922417`, 16 seguidores) e
 1. Aceitar o convite de parceiro no Business Manager (ou conceder o acesso pelo Configurações do negócio).
 2. Se o token vier dela: enviar **somente por canal seguro** (gerenciador de senhas ou link com expiração), **nunca por WhatsApp**.
 3. Decidir se aceita registrar valor de fechamento (`Purchase`); por padrão fica desligado.
-4. Texto da política de privacidade (LGPD) e aceite do banner de cookies.
+4. Revisar o aviso de privacidade (comentários em `lp/privacidade/index.html`) e o texto do banner.
 
 Regra: nenhum token ou chave entra neste repositório, em mensagens ou em logs.

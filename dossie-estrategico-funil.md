@@ -148,7 +148,7 @@ Backup da versão anterior: `lp/index-v4-antes-terrosa.html`.
 | CTA final | "Responda 3 perguntas..., vagas limitadas" | convite acolhedor para avaliação presencial |
 | Tracking | comentário TODO | Pixel + helper `track()` com `eventID` (deduplicação CAPI) e eventos ViewContent/Contact/Lead |
 
-**Pendências da LP:** número real do WhatsApp (`WA`), CRO-GO, endereço e horários, `PIXEL_ID` e `CAPI_ENDPOINT`, autorização/TCLE das imagens, trocar recortes de screenshot por originais, confirmar que "pós-graduação" pode ser citada exatamente assim (nome da instituição/título), política de privacidade (LGPD) com texto real, banner de consentimento de cookies antes de disparar o Pixel. A LP está `noindex` até o go-live.
+**Pendências da LP:** (WhatsApp, CRO-GO 18788 e `PIXEL_ID` 737211919420986 já preenchidos; banner de consentimento e aviso de privacidade em `lp/privacidade/` já implementados, 28/10/2026; falta conferir os comentários do aviso) `CAPI_ENDPOINT`, autorização/TCLE das imagens, trocar recortes de screenshot por originais, confirmar que "pós-graduação" pode ser citada exatamente assim (nome da instituição/título), política de privacidade (LGPD) com texto real, banner de consentimento de cookies antes de disparar o Pixel. A LP está `noindex` até o go-live.
 
 **Sugestão de seção futura:** depoimentos em vídeo sóbrios (com consentimento), bloco "o que a avaliação inclui" (sem prometer), vídeo de 30s da Dra. no hero.
 
@@ -223,7 +223,7 @@ Funil reverso para 1 fechamento/semana: fechamento 50% de avaliações realizada
 
 ## 5. Próximos passos (ordem)
 
-1. Receber da Dra.: WhatsApp oficial, CRO-GO, endereço/horários, TCLE de imagens, título exato das pós-graduações, domínio e acessos (Meta Business, Instagram, Pixel).
+1. Receber da Dra. (WhatsApp e CRO-GO 18788 já recebidos): endereço/horários, TCLE de imagens, título exato das pós-graduações, domínio e acessos (Meta Business, Instagram, Pixel).
 2. Varredura manual da Ads Library (1.4), ou liberar a API.
 3. Gravar 4 criativos (1 por pilar) e revisar contra o checklist CFO (1.3).
 4. Subir tracking: Pixel, endpoint CAPI, Twenty, teste no Events Manager.
