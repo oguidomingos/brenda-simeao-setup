@@ -1,6 +1,6 @@
 # Índice de entregas — Dra. Brenda Simeão (Expoente)
 
-Atualizado em 28/10/2026. Todos os links abrem no Google Drive (conta do Guilherme, sem link público). Para ler no celular, preferir os PDF; o .md é o texto-fonte.
+Atualizado em 28/10/2026. Os links por EXP abaixo são internos e pedem login; os links abertos da cliente estão na seção "Pasta da cliente" no fim. Para ler no celular, preferir os PDF; o .md é o texto-fonte.
 
 Padrão: toda entrega só vale se terminar com um link aberto e conferido.
 
@@ -85,3 +85,25 @@ Pasta raiz: <https://drive.google.com/drive/folders/1mfrfXvotg-W4Ii9Li1k1h4yFH7l
 ## Índice no próprio Drive
 
 - [indice.pdf](https://drive.google.com/file/d/1H7nhH4OQ6LqC6PgRIujqAAzwHHFQ7Rlp/view) e [indice.md](https://drive.google.com/file/d/1rB0dQmhqqoNL7Wcd3cxUf2K_YZBcv_nw/view), na pasta raiz.
+
+## Pasta da cliente (links abertos, conferidos em 29/10/2026)
+
+Todos abrem sem login (qualquer pessoa com o link vê). Conferidos um a um: HTTP 200 e arquivo íntegro. Sem valores em reais, sem BM Brasília, sem documento interno de campanhas.
+
+- Pasta: <https://drive.google.com/drive/folders/1xZQTSRndq7QaltjXRKcnB-SzAWGnQlpP>
+- Logos (22 PNG): <https://drive.google.com/drive/folders/1ONh2K9h6rYsovNul3RgW8OFF76EYhrdh>
+- 01-concorrentes.pdf: <https://drive.google.com/file/d//view>
+- 02-dossie-funil.pdf: <https://drive.google.com/file/d//view>
+- 03-calendario-instagram.pdf: <https://drive.google.com/file/d//view>
+- 04-pixel-rastreamento.pdf: <https://drive.google.com/file/d//view>
+- 05-desenho-crm.pdf: <https://drive.google.com/file/d//view>
+- 06-triagem-whatsapp.pdf: <https://drive.google.com/file/d//view>
+- 07-rastreio-relatorio.pdf: <https://drive.google.com/file/d//view>
+- 08-revisao-landing.pdf: <https://drive.google.com/file/d//view>
+- 09-roteiros-gravacao.pdf: <https://drive.google.com/file/d//view>
+- 10-pacote-instagram.pdf: <https://drive.google.com/file/d//view>
+- 11-landing-celular.pdf: <https://drive.google.com/file/d//view>
+- 12-landing-desktop.pdf: <https://drive.google.com/file/d//view>
+- 13-plano-anuncios.pdf: <https://drive.google.com/file/d//view>
+- 14-logos-lista.pdf: <https://drive.google.com/file/d//view>
+- Fontes e script de geração: pasta cliente/ deste repositório. As versões antigas acima (por EXP) seguem privadas e internas.
