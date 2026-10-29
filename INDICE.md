@@ -92,18 +92,18 @@ Todos abrem sem login (qualquer pessoa com o link vê). Conferidos um a um: HTTP
 
 - Pasta: <https://drive.google.com/drive/folders/1xZQTSRndq7QaltjXRKcnB-SzAWGnQlpP>
 - Logos (22 PNG): <https://drive.google.com/drive/folders/1ONh2K9h6rYsovNul3RgW8OFF76EYhrdh>
-- 01-concorrentes.pdf: <https://drive.google.com/file/d//view>
-- 02-dossie-funil.pdf: <https://drive.google.com/file/d//view>
-- 03-calendario-instagram.pdf: <https://drive.google.com/file/d//view>
-- 04-pixel-rastreamento.pdf: <https://drive.google.com/file/d//view>
-- 05-desenho-crm.pdf: <https://drive.google.com/file/d//view>
-- 06-triagem-whatsapp.pdf: <https://drive.google.com/file/d//view>
-- 07-rastreio-relatorio.pdf: <https://drive.google.com/file/d//view>
-- 08-revisao-landing.pdf: <https://drive.google.com/file/d//view>
-- 09-roteiros-gravacao.pdf: <https://drive.google.com/file/d//view>
-- 10-pacote-instagram.pdf: <https://drive.google.com/file/d//view>
-- 11-landing-celular.pdf: <https://drive.google.com/file/d//view>
-- 12-landing-desktop.pdf: <https://drive.google.com/file/d//view>
-- 13-plano-anuncios.pdf: <https://drive.google.com/file/d//view>
-- 14-logos-lista.pdf: <https://drive.google.com/file/d//view>
-- Fontes e script de geração: pasta cliente/ deste repositório. As versões antigas acima (por EXP) seguem privadas e internas.
+- 01-concorrentes.pdf: <https://drive.google.com/file/d/1b8qjRIpP_QmT2X_r-rDma1Lfjy3zVqQi/view>
+- 02-dossie-funil.pdf: <https://drive.google.com/file/d/16KX0yfd760wMQr3PvxwF4OCqJycRQ6HQ/view>
+- 03-calendario-instagram.pdf: <https://drive.google.com/file/d/143MPXvwTqgo_8orTOjUu7Y_p01cWCWz7/view>
+- 04-pixel-rastreamento.pdf: <https://drive.google.com/file/d/1BBYk4PpWAClbLwoIddd6bF9NfZEXbkGw/view>
+- 05-desenho-crm.pdf: <https://drive.google.com/file/d/1vRnt4hEUpLKAtcaRfxV4JR0F67fUYyh3/view>
+- 06-triagem-whatsapp.pdf: <https://drive.google.com/file/d/1z_i-ntNgirpBCRx1YRCwi38ozQ9HLFFp/view>
+- 07-rastreio-relatorio.pdf: <https://drive.google.com/file/d/1_zzoKJC4cj-ahebVLq4TlGrE1QAUHU48/view>
+- 08-revisao-landing.pdf: <https://drive.google.com/file/d/1WrqNg107-FoowwQ3UpGUCSlTuxkpnbmf/view>
+- 09-roteiros-gravacao.pdf: <https://drive.google.com/file/d/1Zd-ULd7TmiJeN3oskoTZR64nCRh8aMRR/view>
+- 10-pacote-instagram.pdf: <https://drive.google.com/file/d/135HC1_yXsOGW6P-ZZ0uJCvrVjJwkZhea/view>
+- 11-landing-celular.pdf: <https://drive.google.com/file/d/1j_a4FpGACJoYq2cREV7vK6traSc4cSmw/view>
+- 12-landing-desktop.pdf: <https://drive.google.com/file/d/1qCZ-egO4wYob4VmomWv-qd_UGWmPyYcC/view>
+- 13-plano-anuncios.pdf: <https://drive.google.com/file/d/1tzBIBKMHRSgn6abLcFux26XKz7Hoof-K/view>
+- 14-logos-lista.pdf: <https://drive.google.com/file/d/1GWAyC5ERKtm_FbBrumgaRAAlGw5riRl5/view>
+- Fontes e script de geração: pasta cliente/ deste repositório. Os links por EXP acima seguem internos.
