@@ -77,6 +77,11 @@ Pasta raiz: <https://drive.google.com/drive/folders/1mfrfXvotg-W4Ii9Li1k1h4yFH7l
 - [bm-brasilia-lote1.md](https://drive.google.com/file/d/1UfGX4GgbBS41YD2ARa127C-fB5qKF0WC/view?usp=drivesdk) — fonte
 - Fotos (39): <https://drive.google.com/drive/folders/1ClOqB9N9XrZLmcrjTR35EDjj8HFc0Mrt>
 
+## Domínio (consulta 29/10/2026, nada comprado)
+
+- [dominio-brenda.pdf](https://drive.google.com/file/d/1Me5TdxbxRftMwRCA9Ehb9ID-0QlReGH0/view) — disponibilidade, fluxo de compra na Hostinger, campos do titular, mensagem para a Dra. e plano para aprovação (link aberto, conferido)
+- [dominio-brenda.md](https://drive.google.com/file/d/1yDkOQ6L7NtIMYaOHVBZk6bdpAJXTi99W/view) — fonte (link aberto, conferido)
+
 ## Pendências de publicação
 
 - A LP (commit 9d9dd19) continua não publicada; nada foi enviado ao GitHub nem ao GitHub Pages. Por isso a LP está no Drive como captura em PDF.

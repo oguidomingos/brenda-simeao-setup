@@ -1,5 +1,7 @@
 # Domínio — Dra. Brenda Simeão (verificado 23/10/2026, RDAP Registro.br)
 
+> Atualizado em 29/10/2026: ver `dominio-brenda.md`. A Dra. é dentista (CRO-GO), então `.med.br` não serve; a categoria dela é `.odo.br`. A Hostinger registra `.com.br`, `.odo.br` e `.med.br`.
+
 | Domínio | Status |
 |---|---|
 | brendasimeao.com.br | DISPONÍVEL |
