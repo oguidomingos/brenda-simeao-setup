@@ -112,3 +112,8 @@ Todos abrem sem login (qualquer pessoa com o link vê). Conferidos um a um: HTTP
 - 13-plano-anuncios.pdf: <https://drive.google.com/file/d/1tzBIBKMHRSgn6abLcFux26XKz7Hoof-K/view>
 - 14-logos-lista.pdf: <https://drive.google.com/file/d/1GWAyC5ERKtm_FbBrumgaRAAlGw5riRl5/view>
 - Fontes e script de geração: pasta cliente/ deste repositório. Os links por EXP acima seguem internos.
+
+## Pesquisa de anúncios dos concorrentes (29/10/2026)
+
+- [pesquisa-anuncios.pdf](https://drive.google.com/file/d/16GaBFrs4Q4SRrpRyFIUEw8iZ9cW4Y3Ep/view?usp=drivesdk) — 22 anunciantes da Ad Library (Goiânia, DF e Brasil), criativos, destinos, estimativa de custo (marcada como estimativa), conduta CFO/CRO e funil recomendado. Documento interno.
+- Texto-fonte no repositório: `pesquisa-anuncios.md` (imagens em `pesquisa-anuncios/img/`).
