@@ -29,5 +29,7 @@ Fonte: Drive "criativos" (03/11, modelo-feed/story/capa-reels e anúncios 1 a 5)
 
 ## Regras de conteúdo
 - Textos aprovados, sem frase nova. Sem antes e depois em anúncio (regra do CFO). Sem valores.
-- Anúncio 3 e P09: foto de resina esculpida em camadas. Frase "5 anos dedicados a facetas em resina" segue pendente de confirmação dela.
+- Anúncio 3 e P09: foto de resina esculpida em camadas. Frase "5 anos dedicados a facetas em resina" confirmada por ela em 29/10 e 09/11.
 - Variação alternativa: capa antiga do anúncio 3 (a Dra. gostou da foto: "ela ficou tão bonita"), em `alternativas/a3-capa-alt.png`. É foto de preparo para porcelana, então não serve para a frase de camadas. Só guardada.
+
+- Anúncio 1 e 4 (09/11): usam as fotos que ela mandou. Capa do anúncio 1 com o sorriso lateral, alternativa com batom vermelho. Anúncio 4 com labios-1, alternativa com labios-2. Escolha final: Guilherme.

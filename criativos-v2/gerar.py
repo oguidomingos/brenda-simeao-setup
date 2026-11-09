@@ -7,7 +7,7 @@ H=os.path.dirname(os.path.abspath(__file__))+'/'
 def out(sub,name,w,h,**k):
     assert not any(str(v).endswith('_b') for v in k.values()), 'foto desfocada proibida'
     render(piece(w,h,**k),H+sub+'/'+name+'.png',w,h)
-ads={1:[('Naturalidade','Dente natural não é uma cor só.',''),
+ads={1:[('Naturalidade','Dente natural<br>não é uma cor só.',''),
         ('','Dente natural não é de uma cor só.','Tem translucidez nas bordas, tom mais quente perto da gengiva, textura e brilho que mudam com a luz.'),
         ('','Por isso, na escultura à mão, a cor é trabalhada em camadas.','Pensando no seu rosto e no seu sorriso.')],
      2:[('Preservação do dente','Faceta estraga o dente?',''),
@@ -16,19 +16,21 @@ ads={1:[('Naturalidade','Dente natural não é uma cor só.',''),
      3:[('Escultura à mão','Cada faceta, esculpida à mão.',''),
         ('','Cada faceta, esculpida à mão, dente por dente.',''),
         ('','São 5 anos dedicados a facetas em resina.','Com planejamento individual para o seu rosto.')]}
-cap={1:('d087','50% 45%'),2:('d090','50% 50%'),3:('camadas1','50% 45%')}
+cap={1:('dra-a1-sorriso','50% 50%'),2:('d090','50% 50%'),3:('camadas1','50% 45%')}
 FIN={1:'Facetas em resina esculpidas à mão',2:'Uma conversa sobre preservar o seu dente',3:'Escultura em resina, feita pela própria Dra.'}
 for n,fr in ads.items():
     for i,(ey,ti,bd) in enumerate(fr):
         nm='capa' if i==0 else f'q{i+1}'
-        kw=dict(theme='brown' if i==0 else ('cream','sage')[i%2],story=True,eyebrow=ey,title=ti,body=bd,fs=116 if i==0 else 92,align='center' if i==0 else 'left')
+        kw=dict(theme='brown' if i==0 else ('cream','sage')[i%2],story=True,eyebrow=ey,title=ti,body=bd,fs=(100 if n==1 else 116) if i==0 else 92,align='center' if i==0 else 'left')
         if i==0: kw.update(bg=cap[n][0],pos=cap[n][1])
         out('anuncios',f'a{n}-{nm}',1080,1920,**kw)
     out('anuncios',f'a{n}-q{len(fr)+1}',1080,1920,theme='brown',story=True,title=FIN[n],fs=88,closing=CL)
 # variacao alternativa: capa antiga do anuncio 3 (a Dra. gostou da foto), mesma frase
 out('alternativas','a3-capa-alt',1080,1920,theme='brown',story=True,eyebrow='Escultura à mão',title='Cada faceta, esculpida à mão.',fs=116,align='center',bg='bancada',pos='50% 40%')
-out('anuncios','a4',1080,1350,theme='cream',photo='d076',ph=700,pos='50% 50%',title='Dente natural não é de uma cor só',fs=84,closing='Avaliação presencial, particular.')
+out('anuncios','a4',1080,1350,theme='cream',photo='dra-labios-1',ph=700,pos='50% 50%',title='Dente natural não é de uma cor só',fs=84,closing='Avaliação presencial, particular.')
 out('anuncios','a5',1080,1350,theme='sage',title='Medo de ficar com cara de dente de chiclete?',fs=104,closing='Avaliação presencial, particular.')
+out('alternativas','a1-capa-alt',1080,1920,theme='brown',story=True,eyebrow='Naturalidade',title='Dente natural<br>não é uma cor só.',fs=100,align='center',bg='dra-a1-batom',pos='50% 50%')
+out('alternativas','a4-alt',1080,1350,theme='cream',photo='dra-labios-2',ph=700,pos='50% 50%',title='Dente natural não é de uma cor só',fs=84,closing='Avaliação presencial, particular.')
 C='calendario'
 out(C,'p01',1080,1350,theme='cream',photo='retrato2',ph=860,pos='50% 30%',title='Oi, eu sou a Dra. Brenda Simeão.',fs=70,eyebrow='Cirurgiã-dentista · CRO-GO 18788')
 P2=[dict(theme='cream',photo='d076',ph=740,pos='50% 50%',title='Dente natural não é de uma cor só',fs=80),
