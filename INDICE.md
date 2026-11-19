@@ -4,7 +4,7 @@ Atualizado em 28/10/2026. Os links por EXP abaixo são internos e pedem login; o
 
 Padrão: toda entrega só vale se terminar com um link aberto e conferido.
 
-Pasta raiz: <https://drive.google.com/drive/folders/1mfrfXvotg-W4Ii9Li1k1h4yFH7l9VK39>
+Pasta raiz: <https://drive.google.com/drive/folders/1r8KgaWGGDi-bij-xRXKV1m6aIEeoz9F4>
 
 ## EXP-23 — Estudo de concorrentes (benchmark)
 
@@ -95,7 +95,7 @@ Pasta raiz: <https://drive.google.com/drive/folders/1mfrfXvotg-W4Ii9Li1k1h4yFH7l
 
 Todos abrem sem login (qualquer pessoa com o link vê). Conferidos um a um: HTTP 200 e arquivo íntegro. Sem valores em reais, sem BM Brasília, sem documento interno de campanhas.
 
-- Pasta: <https://drive.google.com/drive/folders/1xZQTSRndq7QaltjXRKcnB-SzAWGnQlpP>
+- Pasta: <https://drive.google.com/drive/folders/1zSg7_xM3puFBESKKHm4lU0jNaURXAzdj>
 - Logos (22 PNG): <https://drive.google.com/drive/folders/1ONh2K9h6rYsovNul3RgW8OFF76EYhrdh>
 - 01-concorrentes.pdf: <https://drive.google.com/file/d/1b8qjRIpP_QmT2X_r-rDma1Lfjy3zVqQi/view>
 - 02-dossie-funil.pdf: <https://drive.google.com/file/d/16KX0yfd760wMQr3PvxwF4OCqJycRQ6HQ/view>
